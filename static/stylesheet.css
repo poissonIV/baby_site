@@ -1,0 +1,20 @@
+html *{ font-family: Arial, Helvetica, sans-serif !important; color: #222; color: white; font-size: 16px;}
+body { background-image:linear-gradient(to bottom right, #98B3EB, pink); background-attachment: fixed; text-align: justify; max-width: 86ch; height: 100%; margin:40px auto; padding: 0 10px; text-decoration: none;}
+h1 { font-size: 48px; } 
+h2 { font-size: 22px; margin-bottom: 2px; }
+h3 { font-size: 14px; } 
+p  { font-size: 16px; }
+blockquote { text-align: center; font-size: 16px; font-style: normal; line-height: 30px;}
+pre { background-color: #eee;color: #2f3337;border: 1px solid #ddd; font-size: 14px; padding-left: 2ch; line-height: 18px; overflow: auto; }
+code { background-color: #eee;color: #2f3337; }
+hr { height: 0px; }
+a {color: inherit; text-decoration: solid underline;}  
+a:hover {color: red;}
+img { max-width: 100%; }
+.menu a{ font-size: 38.25pt;  text-decoration: none; ;}
+.index { color: inherit; text-decoration: solid underline; }
+.references { text-decoration: solid underline; text-underline-position: under; }
+.contact{text-align: center;}
+#revealed {font-size: 38.25pt; background: transparent; min-height: 80px; margin-top: 3vh;}
+
+

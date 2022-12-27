@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <center>
+    <head>
+        
+    
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/stylesheet.css">
+        <title>Was wird's?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="menu">
+        <a href="/" style="text-decoration:none">Wird es ein M&auml;dchen oder ein Junge?</a>
+    </div>
+        
+
+    </head>
+    <body>
+        <div id="revealed">???</div>
+        <div id="baby"><img style="border-radius: 10px" src="/static/images/baby-portrait.jpg"</div>
+        <h2>Wir w&uuml;nschen euch alles Gute!</h2>
+    </body>
+    <script>
+        function reset_counter() {
+            sessionStorage.setItem("reveal_counter", 0);
+            console.log('Session Storage reset to: '  + sessionStorage.getItem('reveal_counter'));
+        }
+
+        function visitor_counter() {
+            max_num = 3;
+            if (sessionStorage.getItem('reveal_counter') == null) {
+                reset_counter();
+            }
+            if (Number(sessionStorage.getItem('reveal_counter')) > max_num ) {
+                reset_counter();
+            }
+
+            let _count = Number(sessionStorage.getItem('reveal_counter'));
+            console.log('Counter is now: ' + _count);
+            _count += 1;
+            sessionStorage.setItem('reveal_counter', _count);
+            console.log('Counter was counted to: ' + sessionStorage.getItem('reveal_counter'));
+           
+            if (_count >= max_num) {
+                document.getElementById('revealed').innerText = "🥳 It's a Baby!";
+                sessionStorage.removeItem('reveal_counter');
+            }
+        }
+        visitor_counter();
+    </script>            
+</html>

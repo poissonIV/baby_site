@@ -5,19 +5,21 @@
         
     
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+        <link rel="stylesheet" href="static/stylesheet.css">
         <title>Was wird's?</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="menu">
-        <a href="/" style="text-decoration:none">Wird es ein M&auml;dchen oder ein Junge?</a>
+        <!--a href="/" style="text-decoration:none">Wird es ein M&auml;dchen oder ein Junge?</a-->
     </div>
         
 
     </head>
     <body>
+
         <div id="revealed">???</div>
-        <div id="baby"><img style="border-radius: 10px" src="static/images/baby-portrait.jpg"</div>
-        <h2>Wir w&uuml;nschen euch alles Gute!</h2>
+        <div id="baby"><img style="border-radius: 10px" src="static/images/baby-portrait.jpg"></div>
+        <div id="revealed_details" style="display: none"><img style="border-radius: 10px" src="static/images/xray.jpg"><h2>Hallo lieber, Tiger! Mach schon mal das Wasser warm und sch&auml;le schon mal die Kartoffeln. Heisse K&uuml;sse, B&auml;r. </h2></div>
+
     </body>
     <script>
         function reset_counter() {
@@ -26,7 +28,7 @@
         }
 
         function visitor_counter() {
-            max_num = 3;
+            max_num = 5;
             if (sessionStorage.getItem('reveal_counter') == null) {
                 reset_counter();
             }
@@ -42,6 +44,8 @@
            
             if (_count >= max_num) {
                 document.getElementById('revealed').innerText = "🥳 It's a Baby!";
+                document.getElementById('baby').style.display = "none";
+                document.getElementById('revealed_details').style.display = 'block';
                 sessionStorage.removeItem('reveal_counter');
             }
         }

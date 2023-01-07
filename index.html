@@ -16,9 +16,9 @@
     </head>
     <body>
 
-        <div id="revealed">???</div>
+        <div id="revealed">Versuche es nochmal!</div>
         <div id="baby"><img style="border-radius: 10px" src="static/images/baby-portrait.jpg"></div>
-        <div id="revealed_details" style="display: none"><img style="border-radius: 10px" src="static/images/xray.jpg"><h2>Hallo lieber, Tiger! Mach schon mal das Wasser warm und sch&auml;le schon mal die Kartoffeln. Heisse K&uuml;sse, B&auml;r. </h2></div>
+        <div id="revealed_details" style="display: none"><img style="border-radius: 10px; max-width: 40%; height:auto" src="static/images/boy_1.jpg"><h2>«Worte können nicht ausdrücken die Freude über neues Leben.» (Hermann Hesse)</h2></div>
 
     </body>
     <script>
@@ -43,7 +43,7 @@
             console.log('Counter was counted to: ' + sessionStorage.getItem('reveal_counter'));
            
             if (_count >= max_num) {
-                document.getElementById('revealed').innerText = "🥳 It's a Baby!";
+                document.getElementById('revealed').innerText = "🥳 Es ist ein Junge!";
                 document.getElementById('baby').style.display = "none";
                 document.getElementById('revealed_details').style.display = 'block';
                 sessionStorage.removeItem('reveal_counter');
